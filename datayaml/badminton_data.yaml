@@ -1,0 +1,35 @@
+# # data.yaml 示例
+# # 如果只有验证集进行测试，也可以只设置 val 部分
+# train: /Users/你的用户名/Desktop/your_dataset/train/images
+# val: /Users/你的用户名/Desktop/your_dataset/val/images
+
+# # 对于 pose 任务，可以在其他部分指定类别数，如：
+# nc: 1  # 如果只有单一类别或仅关键点，不同项目可能需要调整
+# names: ['person']  # 如果是人的关键点，或根据实际需要修改
+
+
+# # ceshi.yaml
+# # 根目录地址（如果路径中有反斜杠，请写成双反斜杠或者使用正斜杠）
+# path: C:/Users/Administrator/Desktop/ceshi
+# # 如果你没有训练集，可以只定义 val，或给 train 指定其他路径
+# #train: images/train   # 训练集路径，如果有的话
+# val: images/val       # 验证集路径，此处对应 "C:\Users\Administrator\Desktop\ceshi\images\val"
+# # 对应标签文件，默认认为标签文件与图像文件具有相同的文件名，存放在 ../labels/ 目录下
+
+# 根目录地址（如果路径中有反斜杠，请写成双反斜杠或者使用正斜杠）
+path: C:/Users/Administrator/Desktop/dataset/badminton_data
+# 如果你没有训练集，可以只定义 val，或给 train 指定其他路径
+train: images/train   # 训练集路径，如果有的话
+val: images/val       # 验证集路径，此处对应 "C:\Users\Administrator\Desktop\ceshi\images\val"
+# 对应标签文件，默认认为标签文件与图像文件具有相同的文件名，存放在 ../labels/ 目录下
+
+# 类别数量
+nc: 1  
+
+# Keypoints
+kpt_shape: [17, 3] # number of keypoints, number of dims (2 for x,y or 3 for x,y,visible)
+flip_idx: [0, 2, 1, 4, 3, 6, 5, 8, 7, 10, 9, 12, 11, 14, 13, 16, 15]
+
+# Classes
+names:
+  0: person
